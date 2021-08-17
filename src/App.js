@@ -21,12 +21,8 @@ function App() {
             const resultado = await axios.get(url);
 
             const calcularTotalPaginas = Math.ceil(resultado.data.totalHits / imagenesPorPagina);
-
-            console.log(calcularTotalPaginas)
-
+            
             settotalpaginas(calcularTotalPaginas);
-
-            console.log(pagina);
 
             setimagenes(resultado.data.hits);
 
